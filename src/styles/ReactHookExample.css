@@ -1,0 +1,22 @@
+.hook {
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    border: 2px double var(--border-hook-section-color);
+    margin: 5px 0;
+}
+
+.dark {
+    background-color: rgba(0, 0, 0, 0.15);
+    color: rgb(255, 255, 255, 0.85);
+}
+
+.crystal {
+    backdrop-filter: blur(15px);
+}
+
+.crystal:hover {
+    backdrop-filter: blur(0);
+}
