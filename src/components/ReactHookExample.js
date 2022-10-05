@@ -42,8 +42,8 @@ const ReactHookExample = ({ index }) => {
 
     return (
         <li className="hook">
-            <h2 className="hook-name">{nameHook}</h2>
-            <div className="crystal">
+            <div className="crystal dark">
+                <h2 className="hook-name">{nameHook}</h2>
                 <button className="dark" onClick={() => selectHook()}>
                     Click me
                 </button>

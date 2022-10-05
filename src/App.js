@@ -37,7 +37,8 @@ function App() {
 
     useEffect(() => {
         if (audioRef !== null) {
-            audioRef.current.volume = 0.2
+            const currentAudio = audioRef.current
+            currentAudio.volume = 0.2
         }
     }, [audioRef]);
 
@@ -48,9 +49,7 @@ function App() {
                 <Cards classes={"hooks"} content={hookContent} />
                 <Cards classes={"result column"} content={resultContent} />
             </div>
-            <audio autoPlay loop ref={audioRef}>
-                <source src={music} type="audio/mp3" />
-            </audio>
+            <video autoPlay loop src={music} ref={audioRef} style={{display: "none"}}/>
         </div>
     );
 }

@@ -61,6 +61,24 @@
   align-items: center;
 }
 
+.dark {
+    background-color: rgba(0, 0, 0, 0.15);
+    color: rgb(255, 255, 255, 0.85);
+}
+
+.crystal {
+    border-radius: inherit;
+    backdrop-filter: blur(0);
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -ms-border-radius: inherit;
+    -o-border-radius: inherit;
+}
+
+.crystal:hover {
+    backdrop-filter: blur(100px);
+}
+
 @media screen and (max-width: 1199px) {
     .half {
         width: 100%;

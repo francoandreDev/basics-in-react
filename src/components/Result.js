@@ -5,7 +5,7 @@ import "../styles/Result.css";
 const Result = () => {
     const hooks = useContext(CardContext);
     return (
-        <div className="cards result round-borders">
+        <div className="cards crystal result round-borders">
             {hooks?.name && (
                 <>
                     <h2 className="title">{hooks.name}</h2>

@@ -10,23 +10,12 @@
 
 .hook-name {
     font-size: large;
+    color: var(--border-hook-section-color);
+    opacity: 0.9;
 }
 
 @media screen and (max-width: 600px) {
     .hook {
         min-width: 300px;
     }
-}
-
-.dark {
-    background-color: rgba(0, 0, 0, 0.15);
-    color: rgb(255, 255, 255, 0.85);
-}
-
-.crystal {
-    backdrop-filter: blur(100px);
-}
-
-.crystal:hover {
-    backdrop-filter: blur(0);
 }
