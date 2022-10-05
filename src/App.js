@@ -39,6 +39,7 @@ function App() {
         if (audioRef !== null) {
             const currentAudio = audioRef.current
             currentAudio.volume = 0.2
+            currentAudio.play()
         }
     }, [audioRef]);
 
