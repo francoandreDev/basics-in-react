@@ -1,4 +1,4 @@
-import { AppContext } from "../App";
+import { CardContext } from "../App";
 import React, { useContext } from "react";
 
 import "../styles/ReactHookExample.css";
@@ -34,7 +34,7 @@ const ReactHookExample = ({ index }) => {
         setHooks(newOrder);
     };
 
-    const hooks = useContext(AppContext);
+    const hooks = useContext(CardContext);
     const getHooks = hooks[0];
     const setHooks = hooks[1];
     const currentHook = getHooks[index];
@@ -42,7 +42,7 @@ const ReactHookExample = ({ index }) => {
 
     return (
         <li className="hook">
-            <h2>{nameHook}</h2>
+            <h2 className="hook-name">{nameHook}</h2>
             <div className="crystal">
                 <button className="dark" onClick={() => selectHook()}>
                     Click me

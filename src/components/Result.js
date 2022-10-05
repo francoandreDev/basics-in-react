@@ -1,11 +1,11 @@
-import { AppContext } from "../App";
+import { CardContext } from "../App";
 import React, { useContext } from "react";
 import "../styles/Result.css";
 
 const Result = () => {
-    const hooks = useContext(AppContext);
+    const hooks = useContext(CardContext);
     return (
-        <div className="result round-borders">
+        <div className="cards result round-borders">
             {hooks?.name && (
                 <>
                     <h2 className="title">{hooks.name}</h2>
