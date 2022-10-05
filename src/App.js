@@ -11,6 +11,7 @@ export const CardContext = createContext(null);
 function App() {
     const [hooks, setHooks] = useState(basicHooks);
     const [hook, setHook] = useState(null);
+    const [play, setPlay] = useState(true)
 
     const hookContent = (
         <ul className="list">
@@ -39,9 +40,14 @@ function App() {
         if (audioRef !== null) {
             const currentAudio = audioRef.current
             currentAudio.volume = 0.2
-            currentAudio.play()
         }
     }, [audioRef]);
+
+    const playOrStopSound = () => {
+        play ? audioRef.current.play() :
+        audioRef.current.pause()
+        setPlay(!play)
+    }
 
     return (
         <div className="App">
@@ -50,7 +56,8 @@ function App() {
                 <Cards classes={"hooks"} content={hookContent} />
                 <Cards classes={"result column"} content={resultContent} />
             </div>
-            <video autoPlay loop controls src={music} ref={audioRef} />
+            <button onClick={() => playOrStopSound()} >{play?"Play":"Stop"} Sound</button>
+            <video autoPlay loop controls src={music} ref={audioRef} style={{display: "none"}}/>
         </div>
     );
 }
