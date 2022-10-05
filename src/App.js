@@ -49,7 +49,7 @@ function App() {
                 <Cards classes={"hooks"} content={hookContent} />
                 <Cards classes={"result column"} content={resultContent} />
             </div>
-            <video autoPlay loop src={music} ref={audioRef} style={{display: "none"}}/>
+            <video autoPlay loop controls src={music} ref={audioRef} />
         </div>
     );
 }
