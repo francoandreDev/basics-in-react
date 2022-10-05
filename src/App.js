@@ -48,8 +48,8 @@ function App() {
                 <Cards classes={"hooks"} content={hookContent} />
                 <Cards classes={"result column"} content={resultContent} />
             </div>
-            <audio autoPlay loop contentEditable ref={audioRef}>
-                <source src={music} type="audio/mp3" contentEditable />
+            <audio autoPlay loop ref={audioRef}>
+                <source src={music} type="audio/mp3" />
             </audio>
         </div>
     );
