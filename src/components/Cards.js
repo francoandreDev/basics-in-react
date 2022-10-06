@@ -2,7 +2,7 @@ import "../styles/Cards.css";
 
 const Cards = ({ classes, content }) => {
     return (
-        <section className={`cards ${classes} half round-borders`}>{content}</section>
+        <section className={`cards ${classes} round-borders`}>{content}</section>
     );
 };
 

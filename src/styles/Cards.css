@@ -8,7 +8,6 @@
     position: relative;
     padding: 50px;
     border: 2px double;
-    width: 100%;
 }
 
 .cards::before {
@@ -42,18 +41,6 @@
     content: "Looks like";
 }
 
-.half {
-    width: 50%;
-}
-
-.round-borders {
-    -moz-border-radius: 1em;
-    -ms-border-radius: 1em;
-    -o-border-radius: 1em;
-    -webkit-border-radius: 1em;
-    border-radius: 1em;
-}
-
 .column {
   display: flex;
   flex-direction: column;
@@ -61,26 +48,9 @@
   align-items: center;
 }
 
-.dark {
-    background-color: rgba(0, 0, 0, 0.15);
-    color: rgb(255, 255, 255, 0.85);
-}
-
-.crystal {
-    border-radius: inherit;
-    backdrop-filter: blur(0);
-    -webkit-border-radius: inherit;
-    -moz-border-radius: inherit;
-    -ms-border-radius: inherit;
-    -o-border-radius: inherit;
-}
-
-.crystal:hover {
-    backdrop-filter: blur(100px);
-}
 
 @media screen and (max-width: 1199px) {
-    .half {
+    .cards {
         width: 100%;
     }
 }

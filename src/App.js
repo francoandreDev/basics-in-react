@@ -1,17 +1,17 @@
-import { createContext, useState, useRef, useEffect } from "react";
+import { createContext, useState } from "react";
+import videos from "./data/videos"
 import basicHooks from "./data/hooks";
+import Video from "./components/Video";
 import Result from "./components/Result";
 import ReactHookExample from "./components/ReactHookExample";
 import Cards from "./components/Cards";
 import "./App.css";
-import music from "./assets/audios/music.mp3";
 
 export const CardContext = createContext(null);
 
 function App() {
     const [hooks, setHooks] = useState(basicHooks);
     const [hook, setHook] = useState(null);
-    const [play, setPlay] = useState(true)
 
     const hookContent = (
         <ul className="list">
@@ -30,24 +30,17 @@ function App() {
 
     const resultContent = (
         <CardContext.Provider value={hook}>
-            <Result className="cards result round-borders"/>
+            <Result className="cards result round-borders" />
         </CardContext.Provider>
     );
 
-    const audioRef = useRef(null)
-
-    useEffect(() => {
-        if (audioRef !== null) {
-            const currentAudio = audioRef.current
-            currentAudio.volume = 0.2
-        }
-    }, [audioRef]);
-
-    const playOrStopSound = () => {
-        play ? audioRef.current.play() :
-        audioRef.current.pause()
-        setPlay(!play)
-    }
+    const myVideos = (
+        <div className="columns">
+            {videos.map((obj) => {
+                return <Video music={obj.music} name={obj.name} type={obj.type}/>;
+            })}
+        </div>
+    );
 
     return (
         <div className="App">
@@ -56,8 +49,7 @@ function App() {
                 <Cards classes={"hooks"} content={hookContent} />
                 <Cards classes={"result column"} content={resultContent} />
             </div>
-            <button onClick={() => playOrStopSound()} >{play?"Play":"Stop"} Sound</button>
-            <video autoPlay loop controls src={music} ref={audioRef} style={{display: "none"}}/>
+            {myVideos}
         </div>
     );
 }
