@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Video = ({ music, name }) => {
+
     const playOrStopSound = () => {
         play ? audioRef.current.play() : audioRef.current.pause();
         setPlay(!play);
@@ -17,22 +18,20 @@ const Video = ({ music, name }) => {
     }, [audioRef]);
 
     return (
-        <>
-            <div className="crystal light round-borders">
-                <button
-                    onClick={() => playOrStopSound()}
-                    style={{ border: "2px solid black" }}
-                >
-                    {play ? "Play" : "Stop"} {name}
-                </button>
-                <video
-                    loop
-                    src={music}
-                    ref={audioRef}
-                    style={{ display: "none" }}
-                />
-            </div>
-        </>
+        <div className="crystal light round-borders">
+            <button
+                onClick={() => playOrStopSound()}
+                style={{ border: "2px solid black" }}
+            >
+                {play ? "Play" : "Stop"} {name}
+            </button>
+            <video
+                loop
+                src={music}
+                ref={audioRef}
+                style={{ display: "none" }}
+            />
+        </div>
     );
 };
 

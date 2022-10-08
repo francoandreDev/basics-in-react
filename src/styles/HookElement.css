@@ -1,0 +1,21 @@
+.hook {
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    border: 2px double var(--border-hook-section-color);
+    margin: 5px 0;
+}
+
+.hook-name {
+    font-size: large;
+    color: var(--border-hook-section-color);
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+    .hook {
+        min-width: 300px;
+    }
+}

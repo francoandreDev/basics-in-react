@@ -17,12 +17,19 @@
 }
 
 *::selection {
-    background-color: transparent;
-    filter: blur(0.5);
-    -webkit-filter: blur(0.5);
+    background-color: transparent !important;
+    position: relative;
     opacity: 0.5;
     color: dimgray;
-    text-decoration: underline solid dimgray 10px;
+    text-decoration: underline solid rgb(237, 236, 236) 5px;
+}
+
+*::selection::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(15px);
+    background-color: rgb(44, 44, 44) !important;
 }
 
 h1 {
@@ -172,4 +179,18 @@ button:active {
     -moz-border-radius: inherit;
     -ms-border-radius: inherit;
     -o-border-radius: inherit;
+}
+
+.text-shadow {
+     z-index: 0;
+     font-size: 14px;
+     transform: scale(1.2);
+     opacity: 0.09;
+     filter: brightness(0.9);
+     max-width: 100%;
+     -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+     -ms-transform: scale(1.2);
+     -o-transform: scale(1.2);
+     -webkit-filter: brightness(0.9);
 }
