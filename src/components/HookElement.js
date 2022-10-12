@@ -2,6 +2,7 @@ import { CardsContext } from "./Cards";
 import React, { useContext } from "react";
 
 import "../styles/HookElement.css";
+import { Link } from "react-scroll";
 
 const HookElement = ({ index }) => {
     const assignName = (name) => {
@@ -44,9 +45,25 @@ const HookElement = ({ index }) => {
         <li className="hook">
             <div className="crystal">
                 <h2 className="hook-name">{nameHook}</h2>
-                <button className="dark" onClick={() => selectHook()}>
-                    Click me
-                </button>
+                {nameHook !== "Empty" ? (
+                    <Link to="title-result" smooth={true} delay={500}>
+                        <button
+                            className="dark"
+                            style={{ color: "var(--color-hook-section-color)" }}
+                            onClick={() => selectHook()}
+                        >
+                            Click me
+                        </button>
+                    </Link>
+                ) : (
+                    <button
+                        className="dark"
+                        style={{ color: "var(--color-hook-section-color)" }}
+                        onClick={() => selectHook()}
+                    >
+                        Click me
+                    </button>
+                )}
             </div>
         </li>
     );

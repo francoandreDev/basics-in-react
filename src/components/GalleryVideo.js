@@ -1,9 +1,10 @@
+import videos from "../data/videos";
 import Video from "./Video";
-import videos from "../data/videos"
+import "../styles/GalleryVideo.css";
 
 const GalleryVideo = () => {
     return (
-        <ul className="columns">
+        <ul className="grid">
             {videos.map((obj, index) => {
                 return (
                     <li key={index}>

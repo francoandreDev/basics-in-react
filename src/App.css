@@ -113,6 +113,20 @@ button:active {
     width: 100%;
 }
 
+h1:hover {
+    animation: change-color 2s ease-in infinite alternate;
+    -webkit-animation: change-color 2s ease-in infinite alternate;
+}
+
+@keyframes change-color {
+    0% {
+        color: var(--font-main-color);
+    }
+    100% {
+        color: lightskyblue;
+    }
+}
+
 .rows {
     display: flex;
     flex-direction: row;
@@ -131,7 +145,7 @@ button:active {
 }
 
 @media screen and (max-width: 1199px) {
-    div.rows{
+    div.rows {
         flex-direction: column;
     }
 }
@@ -150,8 +164,8 @@ button:active {
 }
 
 .light {
-    background-color: rgba(255, 255, 255, 0.15) ;
-    color: rgb(0,0,0,0.85);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: rgb(0, 0, 0, 0.85);
 }
 
 .crystal {
@@ -170,7 +184,7 @@ button:active {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 0;
     width: inherit;
     height: inherit;
     border-radius: inherit;
@@ -182,15 +196,15 @@ button:active {
 }
 
 .text-shadow {
-     z-index: 0;
-     font-size: 14px;
-     transform: scale(1.2);
-     opacity: 0.09;
-     filter: brightness(0.9);
-     max-width: 100%;
-     -webkit-transform: scale(1.2);
-     -moz-transform: scale(1.2);
-     -ms-transform: scale(1.2);
-     -o-transform: scale(1.2);
-     -webkit-filter: brightness(0.9);
+    z-index: 0;
+    font-size: 14px;
+    transform: scale(1.2);
+    opacity: 0.09;
+    filter: brightness(0.9);
+    max-width: 100%;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -webkit-filter: brightness(0.9);
 }

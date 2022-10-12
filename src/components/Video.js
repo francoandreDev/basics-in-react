@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import ButtonMusic from "./ButtonMusic";
 
-const Video = ({ music, name }) => {
+const Video = ({ music, name, type }) => {
 
     const playOrStopSound = () => {
         play ? audioRef.current.play() : audioRef.current.pause();
@@ -21,9 +22,9 @@ const Video = ({ music, name }) => {
         <div className="crystal light round-borders">
             <button
                 onClick={() => playOrStopSound()}
-                style={{ border: "2px solid black" }}
+                className="crystal border-color-gray"
             >
-                {play ? "Play" : "Stop"} {name}
+                <ButtonMusic optionButton={play} song={name} type={type}/>
             </button>
             <video
                 loop

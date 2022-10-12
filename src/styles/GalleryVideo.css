@@ -1,0 +1,46 @@
+.crystal {
+    width: 100%;
+    height: 100%;
+}
+
+.grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
+    grid-gap: 5vh 10vw;
+}
+
+.border-color-gray {
+    border: 2px double gray;
+    background-color: transparent;
+}
+
+.music-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.relax {
+    color: rgb(0, 148, 240);
+}
+
+.lyrics {
+    color: rgb(82, 255, 47);
+}
+
+.instrumental {
+    color: rgb(255, 40, 83);
+}
+
+.bright {
+    filter: brightness(1.1) contrast(1) saturate(3) drop-shadow(0 0 0.75rem inherit);
+    -webkit-filter: brightness(1.1) contrast(1) saturate(3) drop-shadow(0 0 0.75rem inherit);
+}
+
+.dim {
+    filter: brightness(0.8);
+    -webkit-filter: brightness(0.8);
+}
