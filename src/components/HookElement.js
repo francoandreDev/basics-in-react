@@ -46,7 +46,12 @@ const HookElement = ({ index }) => {
             <div className="crystal">
                 <h2 className="hook-name">{nameHook}</h2>
                 {nameHook !== "Empty" ? (
-                    <Link to="title-result" smooth={true} delay={500}>
+                    <Link
+                        to="title-result"
+                        smooth={true}
+                        duration={25}
+                        delay={450}
+                    >
                         <button
                             className="dark"
                             style={{ color: "var(--color-hook-section-color)" }}

@@ -9,7 +9,9 @@ const Result = () => {
         <div className="cards crystal result round-borders">
             {hooks?.name && (
                 <div style={{ position: "relative", zIndex: 2, opacity: 0.9 }}>
-                    <h2 className="title" id="title-result">{hooks.name}</h2>
+                    <h2 className="title" id="title-result">
+                        {hooks.name}
+                    </h2>
                     <div className="center-p" style={{ position: "relative" }}>
                         <code className="literal-template">
                             {hooks.example}
@@ -23,8 +25,21 @@ const Result = () => {
                     </div>
                 </div>
             )}
-            <button style={{backgroundColor: "transparent", position: "relative", top: "25px"}}>
-                <Link to="begin" smooth={true} duration={1700} style={{color: "var(--color-result-section-color)"}}>Come back</Link>
+            <button
+                style={{
+                    backgroundColor: "transparent",
+                    position: "relative",
+                    top: "25px"
+                }}
+            >
+                <Link
+                    to="begin"
+                    smooth={true}
+                    duration={25}
+                    style={{ color: "var(--color-result-section-color)" }}
+                >
+                    Come back
+                </Link>
             </button>
         </div>
     );
